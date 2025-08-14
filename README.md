@@ -36,10 +36,10 @@ Banners, signage, and giveaways for memorable events — a trusted partner of SM
 
 ## Contact
 - **Phone:** 0917 824 4123  
-- **Facebook:** [Link]  
-- **Email:** [Link]  
+- **Facebook:** https://www.facebook.com/johngraphicads 
+- **Email:** jpajela14@gmail.com ["https://mail.google.com/mail/u/0/#inbox?compose=jrjtXFCKnHXdmPrKGVbvzkqKCBlPgsWTzsSqRwPFfdwPsLqssmQKzBWpzDsfvdHWqVBZVTTq"]
 - **Office:** 1622 Rizal Avenue, East Tapinac, Olongapo City, Philippines  
-- **Map:** [Location Link]
+- **Map:** https://maps.app.goo.gl/gGu2U9BTa3FkgRfXA
 
 ---
 
