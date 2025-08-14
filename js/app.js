@@ -161,26 +161,46 @@ function setupParallaxEffect() {
 
 // Image handling functions
 function setupImageHandlers() {
-    const images = document.querySelectorAll('.service-image-placeholder img');
+    const images = document.querySelectorAll('.service-image-placeholder img, .service-image-placeholder-solo img');
     images.forEach(img => {
-        img.onload = function() {
-            this.style.display = 'block';
-            const placeholder = this.parentElement.querySelector('.placeholder-text');
-            if (placeholder) {
-                placeholder.style.display = 'none';
-            }
-        };
-        img.onerror = function() {
-            console.log('Image failed to load:', this.src);
-            const placeholder = this.parentElement.querySelector('.placeholder-text');
+        const placeholder = img.parentElement.querySelector('.placeholder-text');
+        // Preload image using JS Image object for faster display
+        const preloadImg = new window.Image();
+        preloadImg.src = img.src;
+
+        // Show placeholder only if image is not loaded
+        if (!img.complete || img.naturalWidth === 0) {
             if (placeholder) {
                 placeholder.style.display = 'block';
-                placeholder.textContent = 'Image not available';
+                placeholder.textContent = 'Loading image...';
             }
-        };
-        // Check if image is already loaded (cached)
-        if (img.complete && img.naturalWidth > 0) {
-            img.onload();
+        } else {
+            img.style.display = 'block';
+            if (placeholder) placeholder.style.display = 'none';
+        }
+
+        // Use decode() for async decode if supported
+        if ('decode' in img) {
+            img.decode().then(() => {
+                img.style.display = 'block';
+                if (placeholder) placeholder.style.display = 'none';
+            }).catch(() => {
+                if (placeholder) {
+                    placeholder.style.display = 'block';
+                    placeholder.textContent = 'Image not available';
+                }
+            });
+        } else {
+            img.onload = function() {
+                this.style.display = 'block';
+                if (placeholder) placeholder.style.display = 'none';
+            };
+            img.onerror = function() {
+                if (placeholder) {
+                    placeholder.style.display = 'block';
+                    placeholder.textContent = 'Image not available';
+                }
+            };
         }
     });
 }
