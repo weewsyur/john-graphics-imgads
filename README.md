@@ -1,11 +1,11 @@
-# John Graphic Image (John Graphics Images)
+# John Graphic Image Advertising (John Graphics Images Advertising)
 
 **Creative Advertising Solutions**
 
 ---
 
 ## Overview
-John Graphic Image is a premier advertising company based in Olongapo City, Philippines. Known for its creative excellence, reliability, and rapid turnaround, the company serves businesses, organizations, and government agencies with top-tier advertising solutions. (© 2025)
+John Graphic Image Advertising is a premier advertising company based in Olongapo City, Philippines. Known for its creative excellence, reliability, and rapid turnaround, the company serves businesses, organizations, and government agencies with top-tier advertising solutions. (© 2025)
 
 ---
 
